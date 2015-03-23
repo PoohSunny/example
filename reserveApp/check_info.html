@@ -59,6 +59,7 @@
 
         var dateValue = checkValRes["reserve_y"] + "/" + checkValRes["reserve_m"] + "/" + checkValRes["reserve_d"];
         if (!starHotelView.checkInfo_isErrorRender(checkValRes, dateValue)) {
+            window.history.pushState(null, null, "error.html");
             return false;
         }
 
