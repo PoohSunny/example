@@ -14,8 +14,26 @@ var starHotelView = {
         }
 
         // field empty check /* could not using jQuery.query plugin, it was confuse return types*/
-        if (!starHotel.fieldEmptyCheck("reserve_y", "reserve_m", "reserve_d", "reserve_t", "hc", "gname")) {
-            $("#errorcheck_result").append("年月日、期間、人数、またはお名前のいずれかが空です<br>");
+        if (!starHotel.fieldEmptyCheck("reserve_y", "reserve_m", "reserve_d")) {
+            $("#errorcheck_result").append("宿泊日が指定されていません<br>");
+            return false;
+        }
+
+        // field empty check /* could not using jQuery.query plugin, it was confuse return types*/
+        if (!starHotel.fieldEmptyCheck("reserve_t")) {
+            $("#errorcheck_result").append("泊数が指定されていません<br>");
+            return false;
+        }
+
+        // field empty check /* could not using jQuery.query plugin, it was confuse return types*/
+        if (!starHotel.fieldEmptyCheck("hc")) {
+            $("#errorcheck_result").append("人数が指定されていません<br>");
+            return false;
+        }
+
+        // field empty check /* could not using jQuery.query plugin, it was confuse return types*/
+        if (!starHotel.fieldEmptyCheck("gname")) {
+            $("#errorcheck_result").append("お名前が指定されていません<br>");
             return false;
         }
 
