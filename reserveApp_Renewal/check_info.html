@@ -61,7 +61,7 @@
 
     <div class="container">
 
-        <h1>予約内容</h1>
+        <h1></h1>
 
         <div id="slide1" class="well">
             <div id="errorcheck_result" style="color:red"></div>
@@ -113,7 +113,11 @@
 
         var dateValue = checkValRes["reserve_y"] + "/" + checkValRes["reserve_m"] + "/" + checkValRes["reserve_d"];
         if (!starHotelView.checkInfo_isErrorRender(checkValRes, dateValue)) {
+        	  $("h1").text("予約エラー");
+        	  document.title = "予約エラー";
             return false;
+        } else {
+        	  $("h1").text("予約内容");
         }
 
         /* calculate charge. If exist some error, not running from here*/
