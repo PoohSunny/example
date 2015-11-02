@@ -1,5 +1,13 @@
-body{
+body.input_form{
 	background-color: #F5F5DC;
+}
+
+body.confirm_form{
+	background-color: #E0EEE0;
+}
+
+body.final_form{
+	background-color: #E0EEEE;
 }
 
 h3 {
